@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mannover| Developer Portfolio</title>
+    <style>
+        :root { --neon: #00d2ff; --bg: #e3cdee; --card: #161616; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; }
+        nav { display: flex; justify-content: center; padding: 20px; background: rgba(0,0,0,0.8); position: sticky; top: 0; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; }
+        nav a:hover { color: var(--neon); }
+        .hero { text-align: center; padding: 100px 20px; background: linear-gradient(to bottom, #111, #0a0a0a); }
+        .profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--neon); box-shadow: 0 0 20px var(--neon); object-fit: cover; }
+        .container { max-width: 1000px; margin: auto; padding: 50px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card); padding: 25px; border-radius: 15px; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { border-color: var(--neon); transform: scale(1.03); }
+        h2 { color: var(--neon); text-align: center; margin-bottom: 40px; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: #222; border: 1px solid #444; color: white; border-radius: 5px; }
+        button { width: 100%; padding: 12px; background: var(--neon); border: none; font-weight: bold; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <nav><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+    <header class="hero">
+        <img src="mano.jpeg" alt="Mannover Ali" class="profile-pic">
+        <h1>Mannover</h1>
+        <p> CST Student</p>
+    </header>
+    <div class="container" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Weather API App</h3>
+                <p>Ek real-time application jo weather data fetch karta hai using OpenWeather API.</p>
+                <a href="#" style="color:var(--neon)">GitHub Link</a>
+            </div>
+            <div class="card">
+                <h3>hotel management</h3>
+                <p>Modern shopping website ka front-end design jo fully responsive hai.</p>
+                <a href="#" style="color:var(--neon)">GitHub Link</a>
+            </div>
+            <div class="card">
+                <h3>Task Manager</h3>
+                <p>JavaScript based To-Do app jisme local storage ka use kiya gaya hai.</p>
+                <a href="#" style="color:var(--neon)">GitHub Link</a>
+            </div>
+        </div>
+    </div>
+    <section class="container" id="contact">
+        <h2>Contact Me</h2>
+        <form id="form1"><input type="text" id="n1" placeholder="Name"><input type="email" placeholder="Email"><textarea placeholder="Message"></textarea><button type="submit">Submit</button></form>
+    </section>
+    <script>
+        document.getElementById('form1').addEventListener('submit', function(e) {
+            e.preventDefault(); alert("Success! Message sent by " + document.getElementById('n1').value);
+        });
+    </script>
+</body>
+</html>
